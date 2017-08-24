@@ -23,7 +23,12 @@
  * ],
  */
 "cpu_threads_conf" : 
-null,
+[
+     { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 0 },
+     { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 1 },
+     { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 2 },
+     { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 3 },
+],
 
 /*
  * LARGE PAGE SUPPORT
@@ -106,8 +111,8 @@ null,
  *
  * We feature pools up to 1MH/s. For a more complete list see M5M400's pool list at www.moneropools.com
  */
-"pool_address" : "pool.usxmrpool.com:3333",
-"wallet_address" : "",
+"pool_address" : "stratum+tcp://xmrpool.eu:3333",
+"wallet_address" : "493afxaeqG6YMwxXkgTgcS76reELhViSdLZMGs6JzH8WMKr3mEQgVVaRSYkNG4KV9y62GTWRYgMRAXik9d8dCssjUhdDBWX",
 "pool_password" : "",
 
 /*
@@ -157,7 +162,7 @@ null,
  * If you are running the process in the background and you don't need the keyboard reports, set this to true.
  * This should solve the hashrate problems on some emulated terminals.
  */
-"daemon_mode" : false,
+"daemon_mode" : true,
 
 /*
  * Output file
@@ -175,7 +180,7 @@ null,
  *
  * httpd_port - Port we should listen on. Default, 0, will switch off the server.
  */
-"httpd_port" : 0,
+"httpd_port" : 16000,
 
 /*
  * prefer_ipv4 - IPv6 preference. If the host is available on both IPv4 and IPv6 net, which one should be choose?
